@@ -1,0 +1,195 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  /* Arka plan degradeli */
+  background: radial-gradient(circle at top left, #1f2937 0, #020617 55%, #020617 100%);
+  color: #f9fafb; /* açık yazı rengi */
+}
+
+
+.navbar {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+.navbar-brand {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.nav-link {
+  font-weight: 400;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #38bdf8 !important;
+  transform: translateY(-1px);
+}
+
+.navbar .btn-outline-light {
+  border-radius: 999px;
+  font-size: 0.9rem;
+  padding-inline: 1.2rem;
+}
+
+
+#team {
+  background: radial-gradient(circle at top, rgba(56, 189, 248, 0.15), transparent 60%);
+  color: #f9fafb;
+}
+
+#team h1 {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+}
+
+/* CARD STİLLERİ – GLASSMORPHISM TARZI */
+.card {
+  background: linear-gradient(
+    145deg,
+    rgba(15, 23, 42, 0.9),
+    rgba(15, 23, 42, 0.7)
+  );
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow:
+    0 18px 35px rgba(15, 23, 42, 0.8),
+    0 0 0 1px rgba(15, 23, 42, 0.9);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 24px 55px rgba(15, 23, 42, 1),
+    0 0 0 1px rgba(56, 189, 248, 0.5);
+  border-color: rgba(56, 189, 248, 0.8);
+}
+
+
+.card-img-top {
+  height: 220px;
+  object-fit: cover;
+  filter: grayscale(20%);
+  transition: filter 0.25s ease, transform 0.25s ease;
+}
+
+.card:hover .card-img-top {
+  filter: grayscale(0%);
+  transform: scale(1.03);
+}
+
+.card-body {
+  padding: 1.25rem 1.3rem 1.4rem;
+}
+
+/* İSİM & POZİSYON */
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+/* Pozisyon (CEO, CTO) */
+.card-text.text-muted {
+  color: #38bdf8 !important;
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Açıklama metni */
+.card-text.small {
+  color: #cbd5f5;
+}
+
+
+.card .d-flex a {
+  font-size: 1.25rem;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+.card .d-flex a:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+  color: #38bdf8 !important;
+}
+
+
+#contact {
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.95),
+    rgba(15, 23, 42, 0.85)
+  );
+  border-top: 1px solid rgba(148, 163, 184, 0.4);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.4);
+}
+
+#contact h2 {
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: #f9fafb;
+}
+
+#contact p {
+  max-width: 520px;
+  margin-inline: auto;
+  color: #e5e7eb;
+}
+
+#contact a {
+  color: #38bdf8;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(56, 189, 248, 0.6);
+  padding-bottom: 2px;
+}
+
+#contact a:hover {
+  color: #7dd3fc;
+  border-bottom-style: solid;
+}
+
+#team h1,
+#team h2,
+#team h5,
+#team p {
+  color: #f9fafb;
+}
+
+
+#contact h2,
+#contact p {
+  color: #e5e7eb;
+}
+
+
+.text-muted {
+  color: #cbd5f5 !important;
+}
+
+
+@media (max-width: 767.98px) {
+  .navbar {
+    padding-block: 0.5rem;
+  }
+
+  #team {
+    padding-top: 3rem;
+  }
+}
